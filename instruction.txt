@@ -1,0 +1,98 @@
+Project Overview
+Build a SaaS web app with the following features and tech stack:
+
+Tech Stack:
+Frontend: HTML, CSS, JavaScript
+Backend: PHP, MySQL
+Authentication: Google OAuth, Email/Password login with email verification
+Email Sending: PHP Mail
+Database: MySQL to store user-specific data
+Features:
+
+Authentication System:
+
+Google Authentication: Users can log in using their Google account.
+Email/Password Authentication: Users can register and log in using their email and password.
+Email Verification: New users must verify their email before accessing the dashboard.
+Account Deletion Request: Users can request account deletion, which can be processed by an admin or support team.
+Dashboard (Main UI Layout):
+
+Sidebar Navigation: Links to User Lists, Templates, Campaigns, Settings, and Profile sections.
+Responsive Layout: Use Tailwind CSS for a clean, responsive design.
+User Lists Section:
+
+Users can upload DOCX and Excel files to create their user lists.
+Data should be securely stored in MySQL and be user-specific (no access to other users' data).
+Templates Section:
+
+Display previously created templates in a grid layout as miniature previews.
+Users can create new templates by writing HTML, CSS, and JS, with a live preview displayed on the right side.
+Some default templates are provided by the company.
+Templates should be stored in the database and be user-specific.
+Campaigns Section:
+
+Users can create email campaigns with the following customization:
+Sender email address
+Email sending interval
+Daily mail sending limits
+The app should track campaign status and email sending progress.
+Users should be able to send personalized emails to recipients in their uploaded user lists.
+Settings Section:
+
+SMTP, IMAP, POP Configuration: Users can add one or more SMTP, IMAP, and POP settings for email sending.
+Users must be able to configure these settings securely for their campaigns.
+Profile Section:
+
+Users can view and update their name, email, and password.
+Database Structure:
+
+Users Table: Store user info (email, password, Google OAuth tokens, etc.).
+Templates Table: Store templates with user-specific data.
+User Lists Table: Store data for user-uploaded lists.
+Campaigns Table: Store campaign data (sender email, mail interval, etc.).
+Settings Table: Store SMTP, IMAP, POP, and other configuration details.
+Logs Table: Store logs related to campaign progress, sending status, etc.
+Security & Access Control:
+
+Role-based Access: Ensure that users can only access their own data (templates, user lists, settings, campaigns).
+Secure File Uploads: Allow users to upload DOCX and Excel files securely.
+Proper Sanitization: Ensure proper sanitization of user inputs to prevent SQL injection and XSS attacks.
+Detailed Task Breakdown:
+
+Authentication Setup:
+
+Implement Google OAuth login and email/password authentication.
+Set up email verification using PHP Mail.
+Add account deletion request functionality.
+Dashboard UI:
+
+Create a sidebar with links to sections: User Lists, Templates, Campaigns, Settings, Profile.
+Use Tailwind CSS to style the layout and make it responsive.
+User Lists Section:
+
+Implement file upload functionality for DOCX and Excel files.
+Parse the uploaded files and store the data in the database.
+Ensure that the lists are specific to the logged-in user and no cross-access is allowed.
+Templates Section:
+
+Display previously created templates as miniature previews in a grid layout.
+Implement an HTML/CSS/JS editor for creating new templates, with a live preview panel.
+Store each user's templates in the database.
+Provide a set of default templates.
+Campaigns Section:
+
+Create a form for users to create and configure email campaigns.
+Include options for selecting the sender email, setting the email interval, and defining daily limits.
+Implement logic for sending emails based on user settings.
+Settings Section:
+
+Provide a form to configure SMTP, IMAP, and POP settings.
+Store the settings securely and allow multiple configurations per user.
+Profile Section:
+
+Allow users to update their name, email, and password.
+Ensure that the password is hashed before storing in the database.
+Database Setup:
+
+Create tables for users, templates, user lists, campaigns, settings, and logs.
+Implement appropriate relationships to ensure data integrity and privacy.

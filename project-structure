@@ -1,0 +1,43 @@
+saas-email-app/
+├── config/
+│   ├── database.php
+│   └── config.php
+├── public/
+│   ├── index.php
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── images/
+├── src/
+│   ├── Auth/
+│   │   ├── GoogleAuth.php
+│   │   └── EmailAuth.php1
+│   ├── Controllers/
+│   │   ├── AuthController.php
+│   │   ├── CampaignController.php
+│   │   ├── TemplateController.php
+│   │   ├── UserListController.php
+│   │   └── SettingsController.php
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── Template.php
+│   │   ├── UserList.php
+│   │   ├── Campaign.php
+│   │   └── Setting.php
+│   └── Utils/
+│       ├── Database.php
+│       └── Security.php
+├── views/
+│   ├── auth/
+│   │   ├── login.php
+│   │   └── register.php
+│   ├── dashboard/
+│   │   ├── index.php
+│   │   ├── campaigns.php
+│   │   ├── templates.php
+│   │   ├── user-lists.php
+│   │   └── settings.php
+│   └── layouts/
+│       └── app.php
+├── composer.json
+└── .env 
